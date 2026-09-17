@@ -47,7 +47,7 @@ public class MenghitungKeuntungan {
         KeuntunganPerHP = jualHP - beliHP - pengirimanHP - pengemasanHP - diskonHP; //untuk menghitung keuntungan HP
         jumlahItemKeuntunganHP = jumlahPenjualanHP - (faktorResikoKerusakanHP / 100 * jumlahPenjualanHP); //untuk menghitung jumlah item penghitung keuntungan HP
         KeuntunganProdukHP = KeuntunganPerHP * jumlahItemKeuntunganHP; // untuk menghitung jumlah keuntungan HP
-        System.out.println("Keuntungan produk HP: " + KeuntunganProdukHP); // untuk menampilkan jumlah keuntungan HP
+        System.out.println(String.format("Keuntungan produk HP: %f ",KeuntunganProdukHP)); // untuk menampilkan jumlah keuntungan HP
 
         //Menerima input dari user untuk produk kabel
         System.out.println("Masukkan harga jual kabel(RP): ");
@@ -69,7 +69,7 @@ public class MenghitungKeuntungan {
         keuntunganPerKabel = jualKabel - beliKabel - pengirimanKabel - pengemasanKabel - diskonKabel; //untuk menghitung keuntungan kabel
         JumlahItemKeuntunganKabel = jumlahPenjualanKabel - (faktorResikoKerusakanKabel / 100 * jumlahPenjualanKabel); //untuk menghitung jumlah item penghitung keuntungan kabel
         KeuntunganProdukKabel = keuntunganPerKabel * JumlahItemKeuntunganKabel; // untuk menghitung jumlah keuntungan kabel
-        System.out.println("Keuntungan produk kabel: " + KeuntunganProdukKabel); // untuk menampilkan jumlah keuntungan kabel
+        System.out.println(String.format("Keuntungan produk kabel: %f ", KeuntunganProdukKabel)); // untuk menampilkan jumlah keuntungan kabel
 
         //Menerima input dari user untuk produk earphone
         System.out.println("Masukkan harga jual earphone(RP): ");
@@ -91,22 +91,22 @@ public class MenghitungKeuntungan {
         KeuntunganPerEarphone = jualEarphone - beliEarphone - pengirimanEarphone - pengemasanEarphone - diskonEarphone; //untuk menghitung keuntungan earphone
         jumlahItemKeuntunganEarphone = jumlahPenjualanEarphone - (faktorResikoKerusakanEarphone / 100 * jumlahPenjualanEarphone); //untuk menghitung jumlah item penghitung keuntungan earphone
         KeuntunganProdukEarphone = KeuntunganPerEarphone * jumlahItemKeuntunganEarphone; // untuk menghitung jumlah keuntungan earphone
-        System.out.println("Keuntungan produk earphone: " + KeuntunganProdukEarphone); // untuk menampilkan jumlah keuntungan earphone
+        System.out.println(String.format("Keuntungan produk earphone: %f ",KeuntunganProdukEarphone)); // untuk menampilkan jumlah keuntungan earphone
 
         //Menghitung keuntungan semua produk
         totalKeuntungan = KeuntunganProdukHP + KeuntunganProdukKabel + KeuntunganProdukEarphone ;
-        System.out.println("Keuntungan semua produk adalah Rp." + totalKeuntungan);
+        System.out.println(String.format("Keuntungan semua produk adalah Rp.%f", totalKeuntungan));
         //Menghitung jumlah item penghitung keuntungan
         totalItemPenghitungKeuntungan = jumlahItemKeuntunganHP + jumlahItemKeuntunganEarphone + JumlahItemKeuntunganKabel;
         //Menghitung rata-rata keuntungan dari semua produk
         rata2keuntungan = totalKeuntungan / totalItemPenghitungKeuntungan;
-        System.out.println("Rata-rata keuntungan semua produk adalah Rp." + rata2keuntungan );
+        System.out.println(String.format("Rata-rata keuntungan semua produk adalah Rp.%f",rata2keuntungan));
         //Menghitung persentase keuntungan yang digapai dari target keuntungan total yang diharapkan
 
         System.out.println("Masukkan total keuntungan yang diharapkan(Rp)");
         targetKeuntungan = sc.nextInt(); //menerima input dari user berupa target keuntungan
         
         persentaseKeuntungan = totalKeuntungan / targetKeuntungan * 1; //menghitung persentase keuntungan
-        System.out.println("Persentase keuntungan yang digapai adalah(%) : " + persentaseKeuntungan); //menampilkan persentase keuntungan yang digapai
+        System.out.println(String.format("Persentase keuntungan yang digapai adalah : %f ", persentaseKeuntungan)); //menampilkan persentase keuntungan yang digapai
     }
 }
