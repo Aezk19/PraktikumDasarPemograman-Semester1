@@ -8,7 +8,7 @@ public class PemilihanIf21Tugas {
         System.out.print("Apakah UKT sudah lunas? (true/false): ");
         boolean uktLunas = sc.nextBoolean();   
 
-        String pesan = (true) ? "Pembayaran UKT terverifikasi\nSilahkan cetak KRS dan minta tanda tangan DPA" : "" ; 
+        String pesan = uktLunas ? "Pembayaran UKT terverifikasi\nSilahkan cetak KRS dan minta tanda tangan DPA" : "" ; 
         System.out.println(pesan);
     }
 }
