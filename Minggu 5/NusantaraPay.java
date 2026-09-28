@@ -6,10 +6,8 @@ public class NusantaraPay {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("---Nusantara Pay---");
-        System.out.print("Apakah akun terdaftar sebagai BLACK-LISTED? (true/false): ");
-        boolean isBlacklist = sc.nextBoolean();
-        System.out.println("Apakah akun terdaftar sebagai SUSPICIOUS? (true/false): ");
-        boolean isSuspicious = sc.nextBoolean();
+        System.out.println("Masukkan Status Nasabah (BLACK-LISTED/SUSPICIOUS/SAFE)");
+        String statusAkun = sc.nextLine();
         System.out.print("Masukkan Sisa Saldo: ");
         long saldo = sc.nextLong();
         System.out.print("Masukkan jumlah transaksi: ");
@@ -20,7 +18,7 @@ public class NusantaraPay {
         float jam = sc.nextFloat();
 
         System.out.println("---Status Transaksi Anda---");
-        if (isBlacklist) {
+        if (statusAkun.equalsIgnoreCase("BLACK-LISTED")) {
             System.out.println("REJECTED_BLACKLIST");
         } else if (transaksi > saldo) {
             System.out.println("REJECTED_SALDO");
@@ -30,7 +28,7 @@ public class NusantaraPay {
             System.out.println("FLAGGED_FRAUD");
         } else if (jam >= 0 && jam <= 4) {
             System.out.println("REQUIRE_OTP_NIGHT");
-        } else if (isSuspicious && transaksi > 500) {
+        } else if (statusAkun.equalsIgnoreCase("SUSPICIOUS") && transaksi > 500) {
             System.out.println("REQUIRE_OTP_SUSPICIOUS");
         } else {
             System.out.println("APRROVED");
