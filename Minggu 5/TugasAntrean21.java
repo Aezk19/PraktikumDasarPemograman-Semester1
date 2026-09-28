@@ -23,6 +23,5 @@ public class TugasAntrean21 {
             default: 
             System.out.println("Kode layanan tidak valid");
         } 
-
     }
 }
