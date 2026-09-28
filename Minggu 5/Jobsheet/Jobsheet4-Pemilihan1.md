@@ -83,8 +83,8 @@ public class PemilihanIf21 {
 }
 ```
 Hasil run:
-    ![Gambar Output Percobaan 1 Pertanyaan No 4](output1-4.1.png)
-    ![Gambar Output Percobaan 1 Pertanyaan No 4](output1-4.2.png)
+![Gambar Output Percobaan 1 Pertanyaan No 4](output1-4.1.png)
+![Gambar Output Percobaan 1 Pertanyaan No 4](output1-4.2.png)
 
 ---
 
