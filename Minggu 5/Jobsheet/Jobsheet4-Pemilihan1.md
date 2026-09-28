@@ -54,7 +54,7 @@ Berikut adalah contoh tampilan *output* setelah program dijalankan:
   * **Jawab:** `true` dan `false` karena kondisi pada blok `if` adalah boolean yang hanya dapat menyimpan true dan false
 * **Pertanyaan 2:** Jalankan program, lalu masukkan `false`. Baris mana saja yang tercetak dan baris mana yang tidak? Jelaskan alur eksekusinya ketika kondisi `IF` bernilai `false`!
   * **Jawab:** Baris yang tercetak tidak ada karena tidak terdapat blok `false`/`else`. Alur eksekusinya adalah pertama program akan mengecek blok `if`. Karena inputnya `false` maka tidak sesuai dengan kondisi di blok `if` yang meminta `true`. Sehingga program tidak menampilkan pernyataan di dalam blok `if` dan langsung ke blok `else`. Namun, karena blok `else` tidak ada maka program tidak mencetak apa-apa'
-    ![Gambar Output Percobaan 1 Pertanyaan No 2](output1-2.png)
+  * ![Gambar Output Percobaan 1 Pertanyaan No 2](output1-2.png)
 * **Pertanyaan 3:** Jalankan program, lalu masukkan `TRUE` (huruf kapital) dan `ya`. Apa yang terjadi pada masing-masing input? Jika program berhenti dengan error, jelaskan penyebabnya! 
   * **Jawab:** Jika dimasukkan `TRUE` program berjalan dengan normal karena tetap dianggap boolean `true`. Tetapi jika dimasukkan `ya` maka program error karena boolean hanya bisa menyimpan nilai `true` dan `false`, tidak bisa selain itu.
   ![Gambar Output Percobaan 1 Pertanyaan No 3](output1-3.1.png)
