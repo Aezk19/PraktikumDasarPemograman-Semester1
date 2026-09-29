@@ -53,8 +53,7 @@ Berikut adalah contoh tampilan *output* setelah program dijalankan:
 ?
   * **Jawab:** `true` dan `false` karena kondisi pada blok `if` adalah boolean yang hanya dapat menyimpan true dan false
 * **Pertanyaan 2:** Jalankan program, lalu masukkan `false`. Baris mana saja yang tercetak dan baris mana yang tidak? Jelaskan alur eksekusinya ketika kondisi `IF` bernilai `false`!
-  * **Jawab:** Baris yang tercetak tidak ada karena tidak terdapat blok `false`/`else`. Alur eksekusinya adalah pertama program akan mengecek blok `if`. Karena inputnya `false` maka tidak sesuai dengan kondisi di blok `if` yang meminta `true`. Sehingga program tidak menampilkan pernyataan di dalam blok `if` dan langsung ke blok `else`. Namun, karena blok `else` tidak ada maka program tidak mencetak apa-apa'
-  
+  * **Jawab:** Baris yang tercetak tidak ada karena tidak terdapat blok `false`/`else`. Alur eksekusinya adalah pertama program akan mengecek blok `if`. Karena inputnya `false` maka tidak sesuai dengan kondisi di blok `if` yang meminta `true`. Sehingga program tidak menampilkan pernyataan di dalam blok `if` dan langsung ke blok `else`. Namun, karena blok `else` tidak ada maka program tidak mencetak apa-apa.
   ![Gambar Output Percobaan 1 Pertanyaan No 2](output1-2.png)
 
 * **Pertanyaan 3:** Jalankan program, lalu masukkan `TRUE` (huruf kapital) dan `ya`. Apa yang terjadi pada masing-masing input? Jika program berhenti dengan error, jelaskan penyebabnya! 
@@ -64,30 +63,31 @@ Berikut adalah contoh tampilan *output* setelah program dijalankan:
 * **Pertanyaan 4:** Sistem perlu memberikan informasi apabila pengguna memasukkan nilai `false`, maka terdapat keluaran “Registrasi ditolak. Silakan lunasi UKT terlebih dahulu”. Modifikasi program tersebut dengan menambahkan struktur `ELSE`, lalu tunjukkan hasil run untuk
 input `true` dan `false`! 
   * **Jawab:**
-```java
-import java.util.Scanner;
+    ```java
+    import java.util.Scanner;
 
-public class PemilihanIf21 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-            
-        System.out.println("---Cetak KRS SIAKAD---");
-        System.out.print("Apakah UKT sudah lunas? (true/false): ");
-        boolean uktLunas = sc.nextBoolean();
+    public class PemilihanIf21 {
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+                
+            System.out.println("---Cetak KRS SIAKAD---");
+            System.out.print("Apakah UKT sudah lunas? (true/false): ");
+            boolean uktLunas = sc.nextBoolean();
 
-        if (uktLunas) {
-            System.out.println("Pembayaran UKT terverifikasi");
-            System.out.println("Silahkan cetak KRS dan minta tanda tangan DPA");
-        } else {
-            System.out.println("Registrasi ditolak. Silahkan lunasi UKT terlebih dahulu");
+            if (uktLunas) {
+                System.out.println("Pembayaran UKT terverifikasi");
+                System.out.println("Silahkan cetak KRS dan minta tanda tangan DPA");
+            } else {
+                System.out.println("Registrasi ditolak. Silahkan lunasi UKT terlebih dahulu");
+            }
         }
     }
-}
-```
-Hasil run:
+    ```
 
-![Gambar Output Percobaan 1 Pertanyaan No 4](output1-4.1.png)
-![Gambar Output Percobaan 1 Pertanyaan No 4](output1-4.2.png)
+    Hasil run:
+
+    ![Gambar Output Percobaan 1 Pertanyaan No 4](output1-4.1.png)
+    ![Gambar Output Percobaan 1 Pertanyaan No 4](output1-4.2.png)
 
 ---
 
@@ -154,155 +154,160 @@ public class PemilihanSwitch21 {
     }
 }
 ```
+
 #### 2.2.3 Jawaban Pertanyaan / Pertanyaan Refleksi
 * **Pertanyaan 1:** Hapus perintah break; pada case 5, lalu compile dan jalankan kembali program dengan masukan 5. Tuliskan keluaran yang muncul, lalu jelaskan apa fungsi break pada struktur SWITCH-CASE berdasarkan hasil percobaan Anda! Kembalikan kode seperti semula setelah selesai.
   * **Jawab:**
-```java
-import java.util.Scanner;
 
-public class PemilihanSwitch21 {
-    public static void main(String[] args) {
-     Scanner sc = new Scanner(System.in);
-     
-     System.out.println("---Cetak KRS SIAKAD---");
-     System.out.print("Masukkkan semester saat ini: ");
-     int semester = sc.nextInt();
+    ```java
+    import java.util.Scanner;
 
-     switch (semester) {
-        case 1:
-            System.out.println("KRS semester 1 ditampilkan");
-            break;
-        case 2:
-            System.out.println("KRS semester 2 ditampilkan");
-            break;
-        case 3:
-            System.out.println("KRS semester 3 ditampilkan");
-            break;
-        case 4:
-            System.out.println("KRS semester 4 ditampilkan");
-            break;
-        case 5:
-            System.out.println("KRS semester 5 ditampilkan");
-        case 6:
-            System.out.println("KRS semester 6 ditampilkan");
-            break;
-        case 7:
-            System.out.println("KRS semester 7 ditampilkan");
-            break;
-        case 8:
-            System.out.println("KRS semester 8 ditampilkan");
-            break;
-        default:
-            System.out.println("Semester tidak valid");
-     }
-    }
-}
-```
-  Hasil run:
-  
-  ![Gambar Output Percobaan 2 Pertanyaan No 1](output2-1.png)
-
-  Fungsi utama `break` pada switch-case adalah untuk menghentikan dan keluar dari blok pernyataan `switch` secara langsung setelah kode pada sebuah case selesai dijalankan.
-* **Pertanyaan 2:** Jalankan program dengan masukan 10, lalu dengan masukan 0. Apa keluaran yang muncul pada kedua percobaan tersebut? Berdasarkan hasil itu, jelaskan peran default dan apa yang akan terjadi pada program jika bagian default dihapus!
-  * **Jawab:** 
-  Dengan Default:
-
-  ![Gambar Output Percobaan 2 Pertanyaan No 2](output2-2.1.png)
-
-  ![Gambar Output Percobaan 2 Pertanyaan No 2](output2-2.2.png)
-
-  Tanpa Default:
-
-  ![Gambar Output Percobaan 2 Pertanyaan No 2](output2-2.3.png)
-
-  ![Gambar Output Percobaan 2 Pertanyaan No 2](output2-2.4.png)
-
-  Peran `default` adalah blok yang akan dirun jika input tidak sesuai dengan case manapun. Jika `default` dihapus program tetap berjalan tanpa error, tetapi jika dimasukkan input yang tidak sesuai dengan case manapun maka tidak akan ada blok yang dirun.
-* **Pertanyaan 3:** Ganti tipe data variabel semester menjadi `double`, lalu compile programnya. Apakah program berhasil dicompile? Tuliskan pesan error yang muncul dan jelaskan penyebabnya. Sebutkan tipe data apa saja yang boleh digunakan sebagai ekspresi pada switch!
-  * **Jawab:**
-```java
-import java.util.Scanner;
-
-public class PemilihanSwitch21 {
-    public static void main(String[] args) {
-     Scanner sc = new Scanner(System.in);
-     
-     System.out.println("---Cetak KRS SIAKAD---");
-     System.out.print("Masukkkan semester saat ini: ");
-     double semester = sc.nextDouble();
-
-     switch (semester) {
-        case 1:
-            System.out.println("KRS semester 1 ditampilkan");
-            break;
-        case 2:
-            System.out.println("KRS semester 2 ditampilkan");
-            break;
-        case 3:
-            System.out.println("KRS semester 3 ditampilkan");
-            break;
-        case 4:
-            System.out.println("KRS semester 4 ditampilkan");
-            break;
-        case 5:
-            System.out.println("KRS semester 5 ditampilkan");
-            break;
-        case 6:
-            System.out.println("KRS semester 6 ditampilkan");
-            break;
-        case 7:
-            System.out.println("KRS semester 7 ditampilkan");
-            break;
-        case 8:
-            System.out.println("KRS semester 8 ditampilkan");
-            break;
-        default:
-            System.out.println("Semester tidak valid");
-     }
-    }
-}
-```
-  Hasil run:
-
-  ![Gambar Output Percobaan 2 Pertanyaan No 3](output2-3.png)
-  
-  Program tidak berhasil di compile, penyebabnya adakah switch case hanya bisa menerima nilai diskrit, sedangkan `double` dapat menyimpan nilai desimal dimana itu tidak diskrit. Tipe data yang bisa digunakan sebagai ekspresi dalam switch adalah `byte`, `short`, `interger`, dan `char`
-* **Pertanyaan 4:** Buat file baru dengan nama PemilihanIfElseNoPresensi.java. Ubah program cetak KRS yang menggunakan SWITCH-CASE tersebut ke dalam bentuk IF-ELSE IF-ELSE, dengan ketentuan keluaran program harus sama persis dengan versi SWITCH-CASE, termasuk untuk masukan yang tidak valid. Menurut Anda mana yang lebih mudah dibaca untuk kasus ini, dan mengapa? 
-  * **Jawab:**
-```java
-import java.util.Scanner;
-
-public class PemilihanIfElse21 {
-    public static void main(String[] args) {
+    public class PemilihanSwitch21 {
+        public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-     
+        
         System.out.println("---Cetak KRS SIAKAD---");
         System.out.print("Masukkkan semester saat ini: ");
         int semester = sc.nextInt();
 
-        if (semester == 1) {
-            System.out.println("KRS semester 1 ditampilan");
-        } else if (semester == 2 ) {
-            System.out.println("Krs semester 2 ditampilkan");
-        } else if (semester == 3) {
-            System.out.println("KRS semester 3 ditampilkan");
-        } else if (semester == 4) {
-            System.out.println("KRS semester 4 ditampilkan");
-        } else if (semester == 5) {
-            System.out.println("KRS semester 5 ditampilkan");
-        } else if (semester == 6) {
-            System.out.println("KRS semester 6 ditampilkan");
-        } else if (semester == 7) {
-            System.out.println("KRS semester 7 ditampilkan");
-        } else if (semester == 8) {
-            System.out.println("KRS semester 8 ditampilkan");
-        } else {
-            System.out.println("Semester tidak valid");
+        switch (semester) {
+            case 1:
+                System.out.println("KRS semester 1 ditampilkan");
+                break;
+            case 2:
+                System.out.println("KRS semester 2 ditampilkan");
+                break;
+            case 3:
+                System.out.println("KRS semester 3 ditampilkan");
+                break;
+            case 4:
+                System.out.println("KRS semester 4 ditampilkan");
+                break;
+            case 5:
+                System.out.println("KRS semester 5 ditampilkan");
+            case 6:
+                System.out.println("KRS semester 6 ditampilkan");
+                break;
+            case 7:
+                System.out.println("KRS semester 7 ditampilkan");
+                break;
+            case 8:
+                System.out.println("KRS semester 8 ditampilkan");
+                break;
+            default:
+                System.out.println("Semester tidak valid");
+        }
         }
     }
-}
-```
-Menurut saya di program ini yang lebih mudah dibaca adalah bentuk SWITCH-CASE karena kondisinya terlihat jelas langsung di `case` sehingga program terlihat lebih rapi dan enak dilihat.
+    ```
+
+    Hasil run:
+    
+    ![Gambar Output Percobaan 2 Pertanyaan No 1](output2-1.png)
+
+    Fungsi utama `break` pada switch-case adalah untuk menghentikan dan keluar dari blok pernyataan `switch` secara langsung setelah kode pada sebuah case selesai dijalankan.
+
+* **Pertanyaan 2:** Jalankan program dengan masukan 10, lalu dengan masukan 0. Apa keluaran yang muncul pada kedua percobaan tersebut? Berdasarkan hasil itu, jelaskan peran default dan apa yang akan terjadi pada program jika bagian default dihapus!
+  * **Jawab:** 
+    Dengan Default:
+
+    ![Gambar Output Percobaan 2 Pertanyaan No 2](output2-2.1.png)
+
+    ![Gambar Output Percobaan 2 Pertanyaan No 2](output2-2.2.png)
+
+    Tanpa Default:
+
+    ![Gambar Output Percobaan 2 Pertanyaan No 2](output2-2.3.png)
+
+    ![Gambar Output Percobaan 2 Pertanyaan No 2](output2-2.4.png)
+
+    Peran `default` adalah blok yang akan dirun jika input tidak sesuai dengan case manapun. Jika `default` dihapus program tetap berjalan tanpa error, tetapi jika dimasukkan input yang tidak sesuai dengan case manapun maka tidak akan ada blok yang dirun.
+  
+* **Pertanyaan 3:** Ganti tipe data variabel semester menjadi `double`, lalu compile programnya. Apakah program berhasil dicompile? Tuliskan pesan error yang muncul dan jelaskan penyebabnya. Sebutkan tipe data apa saja yang boleh digunakan sebagai ekspresi pada switch!
+  * **Jawab:**
+    ```java
+    import java.util.Scanner;
+
+    public class PemilihanSwitch21 {
+        public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("---Cetak KRS SIAKAD---");
+        System.out.print("Masukkkan semester saat ini: ");
+        double semester = sc.nextDouble();
+
+        switch (semester) {
+            case 1:
+                System.out.println("KRS semester 1 ditampilkan");
+                break;
+            case 2:
+                System.out.println("KRS semester 2 ditampilkan");
+                break;
+            case 3:
+                System.out.println("KRS semester 3 ditampilkan");
+                break;
+            case 4:
+                System.out.println("KRS semester 4 ditampilkan");
+                break;
+            case 5:
+                System.out.println("KRS semester 5 ditampilkan");
+                break;
+            case 6:
+                System.out.println("KRS semester 6 ditampilkan");
+                break;
+            case 7:
+                System.out.println("KRS semester 7 ditampilkan");
+                break;
+            case 8:
+                System.out.println("KRS semester 8 ditampilkan");
+                break;
+            default:
+                System.out.println("Semester tidak valid");
+        }
+        }
+    }
+    ```
+    Hasil run:
+
+    ![Gambar Output Percobaan 2 Pertanyaan No 3](output2-3.png)
+  
+    Program tidak berhasil di compile, penyebabnya adakah switch case hanya bisa menerima nilai diskrit, sedangkan `double` dapat menyimpan nilai desimal dimana itu tidak diskrit. Tipe data yang bisa digunakan sebagai ekspresi dalam switch adalah `byte`, `short`, `interger`, dan `char`
+* **Pertanyaan 4:** Buat file baru dengan nama PemilihanIfElseNoPresensi.java. Ubah program cetak KRS yang menggunakan SWITCH-CASE tersebut ke dalam bentuk IF-ELSE IF-ELSE, dengan ketentuan keluaran program harus sama persis dengan versi SWITCH-CASE, termasuk untuk masukan yang tidak valid. Menurut Anda mana yang lebih mudah dibaca untuk kasus ini, dan mengapa? 
+  * **Jawab:**
+    ```java
+    import java.util.Scanner;
+
+    public class PemilihanIfElse21 {
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+        
+            System.out.println("---Cetak KRS SIAKAD---");
+            System.out.print("Masukkkan semester saat ini: ");
+            int semester = sc.nextInt();
+
+            if (semester == 1) {
+                System.out.println("KRS semester 1 ditampilan");
+            } else if (semester == 2 ) {
+                System.out.println("Krs semester 2 ditampilkan");
+            } else if (semester == 3) {
+                System.out.println("KRS semester 3 ditampilkan");
+            } else if (semester == 4) {
+                System.out.println("KRS semester 4 ditampilkan");
+            } else if (semester == 5) {
+                System.out.println("KRS semester 5 ditampilkan");
+            } else if (semester == 6) {
+                System.out.println("KRS semester 6 ditampilkan");
+            } else if (semester == 7) {
+                System.out.println("KRS semester 7 ditampilkan");
+            } else if (semester == 8) {
+                System.out.println("KRS semester 8 ditampilkan");
+            } else {
+                System.out.println("Semester tidak valid");
+            }
+        }
+    }
+    ```
+    Menurut saya di program ini yang lebih mudah dibaca adalah bentuk SWITCH-CASE karena kondisinya terlihat jelas langsung di `case` sehingga program terlihat lebih rapi dan enak dilihat.
 
 ---
 
@@ -354,6 +359,7 @@ public class TugasNo2 {
     }
 }
 ```
+
 #### - Tugas 3
 Tugas Parkir
 ```java
@@ -376,6 +382,7 @@ public class TugasParkir21 {
     }
 }
 ```
+
 Tugas Antrean
 ```java
 import java.util.Scanner;
@@ -412,15 +419,15 @@ public class TugasAntrean21 {
 
 Secara singkat, struktur pemilihan sangat penting digunakan untuk mengatur alur jalannya program berdasarkan variabel atau pilihan yang ditentukan oleh pengguna. Setiap struktur pemilihan memiliki fungsinya masing-masing, gunakan struktur yang sesuai dengan program yang akan dibuat.
 
-## 5: TUGAS DI LUAR JOBSHEET (LMS)
-Berikut adalah daftar tugas yang dikerjakan pada LMS:
+## 5: STUDI KASUS DI LUAR JOBSHEET (LMS)
+Berikut adalah daftar studi kasus yang dikerjakan pada LMS:
 
 - [x] **Tugas 1:** Nusantara Pay — Sistem Keamanan Transaksi
 - [x] **Tugas 2:** UGD RS Harapan Kita — Alokasi Ruang Darurat
 - [x] **Tugas 3:** Konsultan Pajak — Kalkulator PPh 21 Progresif
 
-### 5.1 Implementasi Kode Tugas
-#### - Tugas 1
+### 5.1 Implementasi Kode Studi Kasus
+#### - Kasus 1: Nusantara Pay — Sistem Keamanan Transaksi
 ```java
 import java.util.Scanner;
 
@@ -459,7 +466,7 @@ public class NusantaraPay {
     }
 }
 ```
-#### - Tugas 2
+#### - Kasus 2: UGD RS Harapan Kita — Alokasi Ruang Darurat
 ```java
 import java.util.Scanner;
 
@@ -503,7 +510,7 @@ public class AlokasiRuangDarurat {
     }
 }
 ```
-#### - Tugas 3
+#### - Kasus 3: Konsultan Pajak — Kalkulator PPh 21 Progresif
 ```java
 import java.util.Scanner;
 
