@@ -420,6 +420,8 @@ public class TugasAntrean21 {
 
 Secara singkat, struktur pemilihan sangat penting digunakan untuk mengatur alur jalannya program berdasarkan variabel atau pilihan yang ditentukan oleh pengguna. Setiap struktur pemilihan memiliki fungsinya masing-masing, gunakan struktur yang sesuai dengan program yang akan dibuat.
 
+---
+
 ## 5: STUDI KASUS DI LUAR JOBSHEET (LMS)
 Berikut adalah daftar studi kasus yang dikerjakan pada LMS:
 
